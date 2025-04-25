@@ -116,8 +116,8 @@ const goBackToHome = () => {
   /*padding-bottom: 10px;*/
   padding: 15px 26px;
 
-  border-bottom: 1px solid #ccc; /* 添加分割线 */
-  box-sizing: border-box; /* Include padding for border */
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
   width: 1189.34px;
   height: 68.667px;
   position:fixed;

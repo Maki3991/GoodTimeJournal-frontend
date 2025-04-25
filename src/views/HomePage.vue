@@ -155,7 +155,7 @@ const navigateToHistory = () => {
   padding-top: calc(50vh - 150px); /* Added: Push first item towards center */
   position: relative;
   /* margin-top: 90px; */ /* Removed old margin */
-  margin-top: 70px; /* Adjusted to match header height */
+  margin-top: 70px;
 }
 
 /* 全局中心连接线 - Re-enabled */
@@ -166,11 +166,11 @@ const navigateToHistory = () => {
   /* top: 20px; */ /* 顶部起始位置 */
   top: calc(50vh - 125px); /* Changed: Start below the padding */
   /* bottom: 20px; */ /* 底部结束位置 */ /* Removed bottom constraint */
-  height: 10000vh; /* Added: Make it very tall */
+  height: 100vh;
   width: 2px;
   background-color: #aaa;
   transform: translateX(-50%);
-  z-index: 0; /* 在节点后面 */
+  z-index: 0; 
 }
 
 /* 时间线项 */
@@ -178,15 +178,14 @@ const navigateToHistory = () => {
   /* display: flex; */ /* Removed flex for absolute positioning of events */
   /* flex-direction: column; */
   /* align-items: center; */
-  margin-bottom: 70px; /* Increased margin to prevent overlap */
+  margin-bottom: 70px;
   position: relative;
-  width: 100%; /* Changed from 80% to 100% */
+  width: 100%;
   z-index: 1;
-  padding-top: 10px; /* Add padding to give space for positioned events */
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
-/* Keep date node centered */
 /* 日期节点 */
 .date-node {
   padding: 20px 25px;
