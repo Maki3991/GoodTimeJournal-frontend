@@ -97,7 +97,7 @@ const close = () => {
 // Function to handle confirm action
 const confirmAndClose = () => {
   // TODO: 在这里添加保存事件的逻辑
-  router.push('/'); // 跳转到首页
+  // router.push('/'); // 移除跳转到首页的逻辑
   close(); // 关闭模态框
 };
 

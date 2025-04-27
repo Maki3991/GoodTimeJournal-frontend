@@ -1,4 +1,4 @@
-<template>
+/<template>
   <div class="activity-history">
     <header class="header">
       <h1 class="title">活动历史</h1>
@@ -20,78 +20,98 @@
         <div class="weekday">周六</div>
       </div>
       <div class="calendar-grid">
-        <div class="calendar-cell">
+        <div class="calendar-cell" @click="navigateToEverydayView">
           <span class="date-number">30</span>
         </div>
-        <div class="calendar-cell">
+        <div class="calendar-cell" @click="navigateToEverydayView">
           <span class="date-number">31</span>
         </div>
-        <div class="calendar-cell">
+        <div class="calendar-cell" @click="navigateToEverydayView">
           <span class="date-number">4月1日</span>
         </div>
-        <div class="calendar-cell">
+        <div class="calendar-cell" @click="navigateToEverydayView">
           <span class="date-number">2</span>
-          <div class="event-item"></div>
-          <div class="event-item"></div>
-          <div class="event-item"></div>
+          <div class="event-item" @click.stop="openEventModal"></div>
+          <div class="event-item" @click.stop="openEventModal"></div>
+          <div class="event-item" @click.stop="openEventModal"></div>
         </div>
-        <div class="calendar-cell">
+        <div class="calendar-cell" @click="navigateToEverydayView">
           <span class="date-number">3</span>
-          <div class="event-item"></div>
-          <div class="event-item"></div>
-          <div class="event-item"></div>
+          <div class="event-item" @click.stop="openEventModal"></div>
+          <div class="event-item" @click.stop="openEventModal"></div>
+          <div class="event-item" @click.stop="openEventModal"></div>
           <span class="more-indicator">...</span>
         </div>
-        <div class="calendar-cell">
+        <div class="calendar-cell" @click="navigateToEverydayView">
           <span class="date-number">4</span>
-          <div class="event-item"></div>
-          <div class="event-item"></div>
+          <div class="event-item" @click.stop="openEventModal"></div>
+          <div class="event-item" @click.stop="openEventModal"></div>
         </div>
-        <div class="calendar-cell">
+        <div class="calendar-cell" @click="navigateToEverydayView">
           <span class="date-number">5</span>
         </div>
-        <div class="calendar-cell"><span class="date-number">6</span></div>
-        <div class="calendar-cell"><span class="date-number">7</span></div>
-        <div class="calendar-cell"><span class="date-number">8</span></div>
-        <div class="calendar-cell"><span class="date-number">9</span></div>
-        <div class="calendar-cell"><span class="date-number">10</span></div>
-        <div class="calendar-cell"><span class="date-number">11</span></div>
-        <div class="calendar-cell"><span class="date-number">12</span></div>
-        <div class="calendar-cell"><span class="date-number">13</span></div>
-        <div class="calendar-cell"><span class="date-number">14</span></div>
-        <div class="calendar-cell"><span class="date-number">15</span></div>
-        <div class="calendar-cell"><span class="date-number">16</span></div>
-        <div class="calendar-cell"><span class="date-number">17</span></div>
-        <div class="calendar-cell"><span class="date-number">18</span></div>
-        <div class="calendar-cell"><span class="date-number">19</span></div>
-        <div class="calendar-cell"><span class="date-number">20</span></div>
-        <div class="calendar-cell"><span class="date-number">21</span></div>
-        <div class="calendar-cell"><span class="date-number">22</span></div>
-        <div class="calendar-cell"><span class="date-number">23</span></div>
-        <div class="calendar-cell"><span class="date-number">24</span></div>
-        <div class="calendar-cell"><span class="date-number">25</span></div>
-        <div class="calendar-cell"><span class="date-number">26</span></div>
-        <div class="calendar-cell"><span class="date-number">27</span></div>
-        <div class="calendar-cell"><span class="date-number">28</span></div>
-        <div class="calendar-cell"><span class="date-number">29</span></div>
-        <div class="calendar-cell"><span class="date-number">30</span></div>
-        <div class="calendar-cell"><span class="date-number">5月1日</span></div>
-        <div class="calendar-cell"><span class="date-number">2</span></div>
-        <div class="calendar-cell"><span class="date-number">3</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">6</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">7</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">8</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">9</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">10</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">11</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">12</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">13</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">14</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">15</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">16</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">17</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">18</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">19</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">20</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">21</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">22</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">23</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">24</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">25</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">26</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">27</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">28</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">29</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">30</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">5月1日</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">2</span></div>
+        <div class="calendar-cell" @click="navigateToEverydayView"><span class="date-number">3</span></div>
       </div>
     </div>
+    <!-- 弹窗 -->
+    <EventModal v-if="isModalVisible" @close="closeModal" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import EventModal from '../components/EventModal.vue';
 
 const router = useRouter();
+
+// 控制弹窗显示
+const isModalVisible = ref(false);
+
+const openEventModal = () => {
+  isModalVisible.value = true;
+};
+
+const closeModal = () => {
+  isModalVisible.value = false;
+};
 
 // Logic for fetching and displaying events will go here
 
 const goBackToHome = () => {
   router.back();
+};
+
+const navigateToEverydayView = () => {
+  // TODO: Pass the actual date of the clicked cell
+  router.push({ name: 'EverydayView' });
 };
 </script>
 
@@ -208,6 +228,13 @@ const goBackToHome = () => {
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
   justify-content: flex-end;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.calendar-cell:hover {
+  background-color: #f9f9f9;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
 }
 
 .calendar-cell:nth-child(7n) {
@@ -228,6 +255,12 @@ const goBackToHome = () => {
   height: 18px;
   margin-top: 10px;
   width: 90%;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.event-item:hover {
+  background-color: #d0d0d0;
 }
 
 .more-indicator {
