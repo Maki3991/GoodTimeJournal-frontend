@@ -16,12 +16,15 @@
         </div>
       </div>
     </main>
+    <!-- 弹窗 -->
+    <EventModal v-if="isModalVisible" @close="closeModal" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
+import EventModal from '../components/EventModal.vue'; // 使用相对路径导入
 
 // 假设从路由参数或状态管理获取日期
 const currentDate = ref(new Date(2025, 3, 5)); // 示例日期：2025年4月5日
@@ -70,11 +73,18 @@ const events = ref<EventItem[]>([
 
 const router = useRouter();
 
+// 控制弹窗显示的响应式变量
+const isModalVisible = ref(false);
+
 const openEvent = (event: EventItem) => {
-  // 导航到事件记录与编辑页面，传递事件ID
   console.log(`打开事件: ${event.id}`);
-  // router.push({ name: 'EventEdit', params: { id: event.id } }); // 假设路由名称为 EventEdit
-  // 或打开弹窗
+  isModalVisible.value = true; // 打开弹窗
+  // 之前的导航逻辑被注释掉了，可以根据需要保留或移除
+  // router.push({ name: 'EventEdit', params: { id: event.id } });
+};
+
+const closeModal = () => {
+  isModalVisible.value = false; // 关闭弹窗
 };
 
 const closeView = () => {

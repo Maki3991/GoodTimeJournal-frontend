@@ -9,7 +9,7 @@ const routes = [
     name: 'Home',
     component: HomePage,
   },
-  // 在这里添加其他页面的路由
+
   {
     path: '/history',
     name: 'ActivityHistory',

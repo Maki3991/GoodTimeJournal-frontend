@@ -12,7 +12,7 @@
             placeholder="xxxx年xx月xx日">
         </div>
         <div class="header-right">
-          <button class="header-button confirm-button">✓</button>
+          <button class="header-button confirm-button" @click="confirmAndClose">✓</button>
           <button class="header-button close-button" @click="close">✕</button>
         </div>
       </div>
@@ -56,9 +56,13 @@
 
 <script setup>
 import { ref, watch } from 'vue';
+import { useRouter } from 'vue-router';
 
 // Define the events this component can emit
 const emit = defineEmits(['close']);
+
+// --- Get router instance ---
+const router = useRouter();
 
 // --- Reactive state for title and date ---
 const eventTitle = ref('添加新的事件');
@@ -88,6 +92,13 @@ isDateValid.value = dateFormatRegex.test(eventDate.value);
 // Function to emit the close event
 const close = () => {
   emit('close');
+};
+
+// Function to handle confirm action
+const confirmAndClose = () => {
+  // TODO: 在这里添加保存事件的逻辑
+  router.push('/'); // 跳转到首页
+  close(); // 关闭模态框
 };
 
 // Logic will be added here later

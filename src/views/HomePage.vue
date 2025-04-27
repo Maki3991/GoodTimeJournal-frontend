@@ -12,11 +12,11 @@
     <main class="timeline-container">
       <!-- Timeline content will go here -->
       <div class="timeline-item events-right">
-        <div class="date-node">2025.4.6 星期日</div>
+        <div class="date-node" @click="navigateToEveryday">2025.4.6 星期日</div>
         <div class="events">
-          <div class="event-node">事件1</div>
-          <div class="event-node">事件2</div>
-          <div class="event-node">事件3</div>
+          <div class="event-node" @click="openAddEventModal">事件1</div>
+          <div class="event-node" @click="openAddEventModal">事件2</div>
+          <div class="event-node" @click="openAddEventModal">事件3</div>
         </div>
       </div>
        <div class="week-separator">
@@ -24,17 +24,17 @@
       </div>
       <div class="timeline-item events-left">
          <div class="events">
-           <div class="event-node">事件1</div>
-          <div class="event-node">事件2</div>
+           <div class="event-node" @click="openAddEventModal">事件1</div>
+          <div class="event-node" @click="openAddEventModal">事件2</div>
         </div>
-        <div class="date-node">2025.4.5 星期六</div>
+        <div class="date-node" @click="navigateToEveryday">2025.4.5 星期六</div>
       </div>
        <div class="timeline-item events-right">
-        <div class="date-node">2025.4.4 星期五</div>
+        <div class="date-node" @click="navigateToEveryday">2025.4.4 星期五</div>
          <div class="events">
-           <div class="event-node">事件1</div>
-          <div class="event-node">事件2</div>
-          <div class="event-node">事件3</div>
+           <div class="event-node" @click="openAddEventModal">事件1</div>
+          <div class="event-node" @click="openAddEventModal">事件2</div>
+          <div class="event-node" @click="openAddEventModal">事件3</div>
         </div>
       </div>
     </main>
@@ -66,6 +66,11 @@ const closeModal = () => {
 // 添加导航到活动历史页面的函数
 const navigateToHistory = () => {
   router.push({ name: 'ActivityHistory' }); // 假设路由名称为 'ActivityHistory'
+};
+
+// 添加导航到 EverydayView 页面的函数
+const navigateToEveryday = () => {
+  router.push({ name: 'EverydayView' });
 };
 </script>
 
@@ -201,6 +206,13 @@ const navigateToHistory = () => {
   width: fit-content; /* Adjust width to content */
   margin-left: auto; /* Center using margin */
   margin-right: auto; /* Center using margin */
+  transition: background-color 0.2s, box-shadow 0.2s; /* 添加过渡效果 */
+  cursor: pointer; /* 添加指针样式 */
+}
+
+.date-node:hover {
+  background-color: #e9ecef;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Position events absolutely */
@@ -244,6 +256,12 @@ const navigateToHistory = () => {
   /* Center align the block itself */
   display: block;
   width: fit-content; /* Keep, but max-width takes precedence */
+  transition: background-color 0.2s; /* 添加过渡效果 */
+  cursor: pointer; /* 添加指针样式 */
+}
+
+.separator-node:hover {
+  background-color: #ddd;
 }
 
 .week-separator {
@@ -260,6 +278,13 @@ const navigateToHistory = () => {
   margin: 0 35px; /* Increased horizontal margin from 5px to 8px */
   white-space: nowrap;
   position: relative; /* Needed for pseudo-elements */
+  transition: background-color 0.2s, border-color 0.2s; /* 添加过渡效果 */
+  cursor: pointer; /* 添加指针样式 */
+}
+
+.event-node:hover {
+  background-color: #f5f5f5;
+  border-color: #bbb;
 }
 
 /* 连接线: 事件 <--> 事件 */
